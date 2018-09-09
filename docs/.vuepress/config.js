@@ -59,6 +59,6 @@ module.exports = {
         { text: 'Github', link: 'https://github.com/zhangximufeng' },
         { text: 'About', link: '/about/' },
     ],
-
+    lastUpdated: 'Last Updated',
   }
 }

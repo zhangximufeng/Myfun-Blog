@@ -5,9 +5,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs",
-    "docs:deploy": "yubisaki deploy -u zhangximufeng -p docs -r zhangximufeng.github.io"
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "deploy": "yubisaki deploy -u zhangximufeng -p docs -r zhangximufeng.github.io"
   },
   "dependencies": {
     "markdown-it-imsize": "^2.0.1",
