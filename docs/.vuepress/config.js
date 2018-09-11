@@ -1,7 +1,7 @@
 module.exports = {
   // 启用自定义的主题
-  theme: 'yubisaki',
-  title: 'Myfun',
+  theme: 'mufeng',
+  title: 'Myfun\'s Blog',
   description: 'MuFeng Blog',
   head: [
       ['link', { rel: 'icon', href: `/favicon.ico` }]
@@ -26,7 +26,7 @@ module.exports = {
   // 主题的一些配置
   themeConfig: {
     // 博客背景图片
-    background: `/bg.jpeg`,
+    background: ``,
     // github card
     github: 'zhangximufeng',
     // 博客的 logo
@@ -34,7 +34,7 @@ module.exports = {
     // 定制文章标题颜色
     accentColor: '#ac3e40',
     // 每页显示的文章数量
-    per_page: 5,
+    per_page: 7,
     // 创建文章的时间格式, 不设则不显示 可选 [yyyy-MM-dd HH:mm:ss]
     date_format: 'yyyy-MM-dd',
     // 开启标签功能
@@ -58,7 +58,6 @@ module.exports = {
         { text: 'Tags', link: '/tags/', tags: true }, // 指定它为标签目录
         { text: 'Github', link: 'https://github.com/zhangximufeng' },
         { text: 'About', link: '/about/' },
-    ],
-    lastUpdated: 'Last Updated',
+    ]
   }
 }

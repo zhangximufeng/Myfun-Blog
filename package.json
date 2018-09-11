@@ -7,12 +7,13 @@
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
-    "deploy": "yubisaki deploy -u zhangximufeng -p docs -r zhangximufeng.github.io"
+    "deploy": "mufengblog deploy -u zhangximufeng -p docs -r zhangximufeng.github.io",
+    "page": "mufengblog post -p docs/page --page index.md"
   },
   "dependencies": {
     "markdown-it-imsize": "^2.0.1",
     "markdown-it-task-lists": "^2.1.1",
     "vuepress": "^0.14.2",
-    "vuepress-theme-yubisaki": "^3.0.3"
+    "vuepress-theme-mufeng": "^2.4.2"
   }
 }
