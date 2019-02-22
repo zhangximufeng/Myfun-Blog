@@ -1,3 +1,17 @@
+---
+date: '2018/10/08 11:03:43'
+tag:
+  - js高级
+meta:
+  -
+    name: description
+    content: js高级
+  -
+    name: keywords
+    content: js高级
+---
+[[toc]]
+
 # 内置类型
 
 JS 中分为七种内置类型，七种内置类型又分为两大类型：基本类型和对象（Object）。
@@ -211,7 +225,7 @@ Foo.prototype.getName = function () {
 };
 
 new Foo.getName();   // -> 1
-new Foo().getName(); // -> 2       
+new Foo().getName(); // -> 2
 ```
 
 ![](https://user-gold-cdn.xitu.io/2018/4/9/162a9c56c838aa88?w=2100&h=540&f=png&s=127506)
@@ -219,7 +233,7 @@ new Foo().getName(); // -> 2
 从上图可以看出，`new Foo() ` 的优先级大于 `new Foo` ，所以对于上述代码来说可以这样划分执行顺序
 
 ```js
-new (Foo.getName());   
+new (Foo.getName());
 (new Foo()).getName();
 ```
 
@@ -403,13 +417,13 @@ var foo = 1
 
  ```js
 specialObject = {};
-  
+
 Scope = specialObject + Scope;
-  
+
 foo = new FunctionExpression;
 foo.[[Scope]] = Scope;
 specialObject.foo = foo; // {DontDelete}, {ReadOnly}
-  
+
 delete Scope[0]; // remove specialObject from the front of scope chain
  ```
 
@@ -600,10 +614,10 @@ console.log(newObj)
 let a = {
     age: undefined,
     jobs: function() {},
-    name: 'yck'
+    name: 'zhangximufeng'
 }
 let b = JSON.parse(JSON.stringify(a))
-console.log(b) // {name: "yck"}
+console.log(b) // {name: "zhangximufeng"}
 ```
 
 你会发现在上述情况中，该方法会忽略掉函数和 `undefined` 。
@@ -705,9 +719,9 @@ define(['./a', './b'], function(a, b) {
     a.do()
     b.do()
 })
-define(function(require, exports, module) {   
-    var a = require('./a')  
-    a.doSomething()   
+define(function(require, exports, module) {
+    var a = require('./a')
+    a.doSomething()
     var b = require('./b')
     b.doSomething()
 })
@@ -763,7 +777,7 @@ function now() {
  */
 function debounce (func, wait = 50, immediate = true) {
   let timer, context, args
-  
+
   // 延迟执行函数
   const later = () => setTimeout(() => {
     // 延迟函数执行完毕，清空缓存的定时器序号
@@ -817,7 +831,7 @@ function debounce (func, wait = 50, immediate = true) {
  * @param  {object}     options   如果想忽略开始函数的的调用，传入{leading: false}。
  *                                如果想忽略结尾函数的调用，传入{trailing: false}
  *                                两者不能共存，否则函数不能执行
- * @return {function}             返回客户调用函数   
+ * @return {function}             返回客户调用函数
  */
 _.throttle = function(func, wait, options) {
     var context, args, result;
@@ -955,8 +969,8 @@ function getValue(name, age) {
     console.log(age)
     console.log(this.value)
 }
-getValue.call(a, 'yck', '24')
-getValue.apply(a, ['yck', '24'])
+getValue.call(a, 'zhangximufeng', '24')
+getValue.apply(a, ['zhangximufeng', '24'])
 ```
 
 ## 模拟实现 call 和 apply
@@ -970,11 +984,11 @@ getValue.apply(a, ['yck', '24'])
 Function.prototype.myCall = function (context) {
   var context = context || window
   // 给 context 添加一个属性
-  // getValue.call(a, 'yck', '24') => a.fn = getValue
+  // getValue.call(a, 'zhangximufeng', '24') => a.fn = getValue
   context.fn = this
   // 将 context 后面的参数取出来
   var args = [...arguments].slice(1)
-  // getValue.call(a, 'yck', '24') => a.fn('yck', '24')
+  // getValue.call(a, 'zhangximufeng', '24') => a.fn('zhangximufeng', '24')
   var result = context.fn(...args)
   // 删除 fn
   delete context.fn
@@ -1458,7 +1472,7 @@ parseFloat((0.1 + 0.2).toFixed(10))
 |   []   |  匹配方括号内的任意字符。比如 [0-9] 就可以用来匹配任意数字   |
 |   ^    | ^9，这样使用代表匹配以 9 开头。[`^`9]，这样使用代表不匹配方括号内除了 9 的字符 |
 | {1, 2} |                      匹配 1 到 2 位字符                      |
-| (yck)  |                   只匹配和 yck 相同字符串                    |
+| (zhangximufeng)  |                   只匹配和 zhangximufeng 相同字符串                    |
 |   \|   |                     匹配 \| 前后任意字符                     |
 |   \    |                             转义                             |
 |   *    |               只匹配出现 0 次及以上 * 前的字符               |

@@ -54,10 +54,11 @@ module.exports = {
     nav: [
         { text: 'Home', link: '/', root: true }, // 指定它为博客根目录
         { text: 'InterviewMap', link: '/interview/' }, // 面经
-        { text: 'Commons', link: '/commons/' }, // 通用知识
+        { text: 'CSS_Tricks', link: 'https://zhangximufeng.github.io/css_tricks/' },
+        { text: 'JS_Tricks', link: 'https://zhangximufeng.github.io/js_tricks/' },
         { text: 'Tags', link: '/tags/', tags: true }, // 指定它为标签目录
         { text: 'Github', link: 'https://github.com/zhangximufeng' },
-        { text: 'About', link: '/about/' },
+        { text: 'About', link: 'https://zhangximufeng.github.io/animate_resume_ts/' },
     ]
   }
 }

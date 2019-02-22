@@ -1,6 +1,18 @@
-本文不会介绍 Git 的基本操作，会对一些高级操作进行说明。
+---
+date: '2018/10/08 11:03:43'
+tag:
+  - git
+meta:
+  -
+    name: description
+    content: git
+  -
+    name: keywords
+    content: git
+---
+[[toc]]
 
-## Rebase 合并
+# Rebase 合并
 
 该命令可以让和 `merge` 命令得到的结果基本是一致的。
 
